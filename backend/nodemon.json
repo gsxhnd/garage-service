@@ -1,7 +1,7 @@
 {
-  "verbose": false,
-  "debug": false,
-  "exec": "ts-node -r tsconfig-paths/register ./app.ts",
+  "verbose": true,
+  "debug": true,
+  "exec": "tsc && node dist/app.js",
   "ignore": [
     "mochawesome-report",
     "node_modules",
@@ -16,7 +16,7 @@
   "events": {
     "restart": ""
   },
-  "watch": ["./app", "./configs", "./app.ts"],
+  "watch": ["src", "./configs"],
   "ext": "ts",
   "inspect": true
 }
