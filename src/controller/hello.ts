@@ -1,10 +1,9 @@
 import { Context, Next } from "koa";
-import { Response, ResponseFail, ResponseSuccess } from "../errno";
+import { ResponseError, ResponseSuccess } from "../errno";
 
 class Hello {
   async test(ctx: Context, next: Next) {
-    const banko = ctx.params.banko;
-    ctx.body = ResponseSuccess(banko);
+    ctx.body = ResponseSuccess("hello");
 
     await next();
   }

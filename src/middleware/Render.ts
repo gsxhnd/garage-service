@@ -7,7 +7,6 @@ async function Render(ctx: koa.Context, next: koa.Next) {
     ctx.status = 404;
     ctx.body = { message: "404" };
   } else {
-    console.log(ctx.body);
     ctx.body = ctx.body;
   }
   await next();
